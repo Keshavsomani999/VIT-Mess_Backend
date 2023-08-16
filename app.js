@@ -83,7 +83,7 @@ const exportCountriesFile = async (data) => {
   };
 
 
-  app.get("/api/v1/admin",async(req,res)=>{
+  app.get("/",async(req,res)=>{
 
     res.status(200).send("Hello")
 
