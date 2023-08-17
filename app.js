@@ -91,9 +91,11 @@ const exportCountriesFile = async (data) => {
 
 
 app.get("/api/v1/admin",async(req,res)=>{
+  console.log("01");
     res.setHeader('Content-Type', 'application/vnd.openxmlformats');
     res.setHeader("Content-Disposition", "attachment; filename=" + 
     "Students.xlsx");
+    console.log("02");
     let date = new Date().toISOString();
     let result = date.slice(0,10);
     console.log(result);
@@ -114,14 +116,7 @@ app.get("/api/v1/admin",async(req,res)=>{
         }
       });
 
-    // res.download("./Students.xlsx",(err)=>{
-    //     console.log(err);
-    // })
-
-    // res.status(200).json({
-    //     success:true,
-    //     data
-    // })
+    
 })
 
 
