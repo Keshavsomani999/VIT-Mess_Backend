@@ -85,7 +85,7 @@ const exportCountriesFile = async (data) => {
 
   app.get("/",async(req,res)=>{
 
-    res.status(200).send("Hello")
+    res.status(200).send("buy")
 
   })
 
