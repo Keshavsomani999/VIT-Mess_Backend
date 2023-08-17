@@ -91,7 +91,7 @@ const exportCountriesFile = async (data) => {
 
 
 app.get("/api/v1/admin",async(req,res)=>{
-  console.log("01");
+  window.print("01")
     res.setHeader('Content-Type', 'application/vnd.openxmlformats');
     res.setHeader("Content-Disposition", "attachment; filename=" + 
     "Students.xlsx");
