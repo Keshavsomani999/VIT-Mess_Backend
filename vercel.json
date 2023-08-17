@@ -1,11 +1,6 @@
 {
     "version": 2,
     "name": "music-album",
-    "functions": {
-      "app.js": {
-        "memory": 3008,
-        "maxDuration": 60
-      },
     "builds": [
        { "src": "app.js", "use": "@vercel/node" }
     ],
@@ -13,4 +8,3 @@
        { "src": "/(.*)", "dest": "/app.js" }
     ]
  }
-}
