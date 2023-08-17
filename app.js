@@ -101,20 +101,20 @@ app.get("/api/v1/admin",async(req,res)=>{
     console.log(result);
 
     const data = await Student.find({createdAt:{$gte:`${result}T00:01:00.597+00:00`}})
-
+    res.status(500).send('IServerr');
 
     await exportCountriesFile(data);
     const filePath = path.join(__dirname, 'Students.xlsx');
 
-    res.download(filePath, (err) => {
-        if (err) {
-          console.error(err);
-          res.status(500).send('Internal Server Error');
-        } else {
-          console.log('File sent successfully!');
+    // res.download(filePath, (err) => {
+    //     if (err) {
+    //       console.error(err);
+    //       res.status(500).send('Internal Server Error');
+    //     } else {
+    //       console.log('File sent successfully!');
           
-        }
-      });
+    //     }
+    //   });
 
     
 })
