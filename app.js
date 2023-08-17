@@ -91,20 +91,20 @@ const exportCountriesFile = async (data) => {
 
 
 app.get("/api/v1/admin",async(req,res)=>{
-  window.print("01")
-    res.setHeader('Content-Type', 'application/vnd.openxmlformats');
-    res.setHeader("Content-Disposition", "attachment; filename=" + 
-    "Students.xlsx");
-    console.log("02");
-    let date = new Date().toISOString();
-    let result = date.slice(0,10);
-    console.log(result);
+  // window.print("01")
+  //   res.setHeader('Content-Type', 'application/vnd.openxmlformats');
+  //   res.setHeader("Content-Disposition", "attachment; filename=" + 
+  //   "Students.xlsx");
+  //   console.log("02");
+  //   let date = new Date().toISOString();
+  //   let result = date.slice(0,10);
+  //   console.log(result);
 
-    const data = await Student.find({createdAt:{$gte:`${result}T00:01:00.597+00:00`}})
+  //   const data = await Student.find({createdAt:{$gte:`${result}T00:01:00.597+00:00`}})
     res.status(500).send('IServerr');
 
-    await exportCountriesFile(data);
-    const filePath = path.join(__dirname, 'Students.xlsx');
+    // await exportCountriesFile(data);
+    // const filePath = path.join(__dirname, 'Students.xlsx');
 
     // res.download(filePath, (err) => {
     //     if (err) {
